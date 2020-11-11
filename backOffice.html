@@ -31,7 +31,7 @@
 		<!--myCSS-->
 		<link rel="stylesheet" href="project.css" />
 		<!--myScripts-->
-		<script src="shopFloor.js"></script>
+		<script src="backOffice.js"></script>
 		<title>i will be changed by config</title>
 	</head>
 	<body class="bg-dark">
@@ -39,7 +39,7 @@
 		<nav
 			class="navbar navbar-expand-lg navbar-dark bg-secondary shadow-lg sticky-top py-0"
 		>
-			<a id="mainMenu" class="navbar-brand" href="backOffice.html">Navbar</a>
+			<a id="mainMenu" class="navbar-brand" href="index.html">Navbar</a>
 			<button
 				class="navbar-toggler"
 				type="button"
@@ -118,27 +118,17 @@
 			</a>
 		</nav>
 		<!--#endregion-->
-		<!--#region shopfloor-->
-		<div class="container">
-			<div class="row" id="floor">
-				<div
-					class="card template m-2 col col-12 col-sm-6 col-md-4 p-0"
-					style="width: 18rem"
-				>
-					<img class="card-img-top" alt="..." />
-					<div class="card-body">
-						<h5 class="card-title name">Card title</h5>
-						<p class="card-text description">
-							Some quick example text to build on the card title and make up the
-							bulk of the card's content.
-						</p>
-					</div>
-					<div class="card-footer d-flex">
-						<p class="badge badge-success flex-fill m-0 price">1dollar</p>
-					</div>
-				</div>
-			</div>
+		<!--#region backoffice-->
+		<form onsubmit="sender(event)">
+			<div class="d-flex flex-column">
+			<input type="text" name="name" id="name" placeholder="Name" required></text>
+			<textarea name="description" id="description" placeholder="Descritpion" required></textarea>
+			<input type="text" name="brand" id="brand" placeholder="Brand" required></input>
+			<input type="text" name="imageUrl" id="imageUrl" placeholder="Image's address" required></input>
+			<input type="number" name="price" id="price" min=0  step=".01" placeholder="price" required></input>
+			<button type="submit" class="btn btn-primary"required>Submit</button>
 		</div>
-		<!--#endregion-->
+		</form>
+		<!--endregion-->
 	</body>
 </html>
